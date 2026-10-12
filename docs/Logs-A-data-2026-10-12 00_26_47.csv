@@ -1,0 +1,9 @@
+"Date","Time","Line","tsNs","id","detected_level","filename","job","service_name"
+2026-10-12T04:00:05.837Z,1791777605837,[JUNKMON] Patch analysis complete. Report generated successfully.,1791777605837807993,1791777605837807993_a76956ec,unknown,junkmon_report.log,junkmon_telemetry,junkmon_telemetry
+2026-10-12T04:00:05.837Z,1791777605837,[JUNKMON] [SCRAP_DATA] Unrecognized external IP querying endpoint,1791777605837807993,1791777605837807993_f13ad8d,unknown,junkmon_report.log,junkmon_telemetry,junkmon_telemetry
+2026-10-12T04:00:05.837Z,1791777605837,[JUNKMON] [SCRAP_DATA] Suspicious login spike detected on port 22,1791777605837807993,1791777605837807993_45fd1371,unknown,junkmon_report.log,junkmon_telemetry,junkmon_telemetry
+2026-10-12T04:00:05.837Z,1791777605837,[JUNKMON] Scraping raw logs from telemetry stream...,1791777605837807993,1791777605837807993_1fecb4e4,unknown,junkmon_report.log,junkmon_telemetry,junkmon_telemetry
+2026-10-12T03:58:07.319Z,1791777487319,[JUNKMON] Patch analysis complete. Report generated successfully.,1791777487319204164,1791777487319204164_a76956ec,unknown,junkmon_report.log,junkmon_telemetry,junkmon_telemetry
+2026-10-12T03:58:07.319Z,1791777487319,[JUNKMON] [SCRAP_DATA] Unrecognized external IP querying endpoint,1791777487319204164,1791777487319204164_f13ad8d,unknown,junkmon_report.log,junkmon_telemetry,junkmon_telemetry
+2026-10-12T03:58:07.319Z,1791777487319,[JUNKMON] [SCRAP_DATA] Suspicious login spike detected on port 22,1791777487319204164,1791777487319204164_45fd1371,unknown,junkmon_report.log,junkmon_telemetry,junkmon_telemetry
+2026-10-12T03:58:07.319Z,1791777487319,[JUNKMON] Scraping raw logs from telemetry stream...,1791777487319204164,1791777487319204164_1fecb4e4,unknown,junkmon_report.log,junkmon_telemetry,junkmon_telemetry

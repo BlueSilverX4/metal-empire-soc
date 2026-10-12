@@ -1,0 +1,53 @@
+
+services:
+  armageddemon-lab:
+    image: ubuntu:latest
+    container_name: metal-empire-armageddemon-test
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/workspace
+    networks:
+      - metal-net
+    command: /bin/bash
+    restart: unless-stopped
+
+  loki:
+    image: grafana/loki:latest
+    container_name: metal-empire-loki
+    ports:
+      - "3101:3100"
+    command:
+      - -config.file=/etc/loki/loki-config.yaml
+    volumes:
+      - ./06-monitoring/loki/loki-config.yaml:/etc/loki/loki-config.yaml:ro
+      - loki-data:/loki
+    networks:
+      - metal-net
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: metal-empire-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: "${GRAFANA_ADMIN_PASSWORD:?Set GRAFANA_ADMIN_PASSWORD in .env}"
+    volumes:
+      - ./06-monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - grafana-data:/var/lib/grafana
+    networks:
+      - metal-net
+    depends_on:
+      - loki
+    restart: unless-stopped
+
+networks:
+  metal-net:
+    driver: bridge
+
+volumes:
+  loki-data:
+  grafana-data:
